@@ -1,36 +1,63 @@
-/* Styling général de la page */
+/* Style général de la page */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   font-family: 'Arial', sans-serif;
-  background-color: #f4f7fc;
+  background-color: #f7f9fc;  /* Fond clair */
   color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #4caf50;  /* Couleur principale verte */
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-size: 1.5em;
-  color: #333;
+  color: #4caf50;  /* Couleur des titres des compteurs */
   margin-bottom: 1rem;
 }
 
+/* Style des cartes (compteurs) */
 .card {
-  padding: 2em;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);  /* Effet de levée au survol */
+}
+
+.counter-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #4caf50;  /* Affichage des valeurs en vert */
+}
+
+/* Conteneur des compteurs */
+.counter-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 /* Style des boutons */
 button {
   padding: 0.8rem 1.5rem;
-  font-size: 1em;
+  font-size: 1.1em;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
   margin: 0.5rem;
 }
 
@@ -40,37 +67,38 @@ button:disabled {
 }
 
 button:not(:disabled):hover {
-  transform: scale(1.1);
+  transform: scale(1.1);  /* Légère augmentation de la taille au survol */
 }
 
+/* Couleur et effet de survol des boutons */
 button.start {
-  background-color: #4caf50;
+  background-color: #4caf50;  /* Vert pour démarrer */
   color: white;
 }
 
 button.start:hover {
-  background-color: #45a049;
+  background-color: #388e3c;  /* Vert foncé au survol */
 }
 
 button.stop {
-  background-color: #f44336;
+  background-color: #f44336;  /* Rouge pour arrêter */
   color: white;
 }
 
 button.stop:hover {
-  background-color: #e53935;
+  background-color: #e53935;  /* Rouge foncé au survol */
 }
 
 button.reset {
-  background-color: #2196f3;
+  background-color: #2196f3;  /* Bleu pour réinitialiser */
   color: white;
 }
 
 button.reset:hover {
-  background-color: #1e88e5;
+  background-color: #1976d2;  /* Bleu foncé au survol */
 }
 
-/* Effets sur le logo */
+/* Effet du logo */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -79,7 +107,7 @@ button.reset:hover {
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #646cffaa);  /* Ombre portée au survol */
 }
 
 .logo.react:hover {
@@ -102,31 +130,6 @@ button.reset:hover {
   }
 }
 
-/* Texte pour les compteurs */
-.counter-display {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 1rem 0;
-  color: #333;
-}
-
 .read-the-docs {
   color: #888;
-}
-
-/* Ajout de l'espacement pour les compteurs */
-.counter-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.counter-container > div {
-  width: 250px;
-  padding: 1.5rem;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  text-align: center;
 }
